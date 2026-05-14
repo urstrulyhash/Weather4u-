@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weather4u!</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+ 
+
+
+  <div class="overlay"></div>
+
+  <div class="container">
+
+    <h1>🌦 Weather4u!</h1>
+
+    <div class="search-box">
+
+      <input type="text" id="city-input" placeholder="Enter city name">
+
+      <button id="search-btn">Search</button>
+      <p id="time" style="color: white; font-style: bold ; text-align: center; font-weight: 300;"></p>
+
+
+
+    </div>
+
+    <div class="weather-box">
+
+      <h2 id="city-name">City</h2>
+
+      <img id="weather-icon" src="" alt="Weather Icon">
+
+      <h1 id="temperature">°C</h1>
+
+      <p id="description">Weather</p>
+
+      <div class="details">
+
+        <div class="card">
+          <h3>Humidity</h3>
+          <p id="humidity"></p>
+        </div>
+
+        <div class="card">
+          <h3>Wind</h3>
+          <p id="wind-speed"></p>
+        </div>
+
+      </div>
+
+      <div class="recommendation">
+
+        <h3>🍲 Food:</h3>
+        <p id="food"></p>
+
+        <h3>👕 Clothes Suggestion</h3>
+        <p id="clothes"></p>
+
+        <h3>🚗 Travel Advice</h3>
+        <p id="vehicle"></p>
+
+        <h3>💡:</h3>
+        <p id="suggestion"></p>
+
+        <h3>🎬 :</h3>
+        <p id="dialogue"></p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
