@@ -13,7 +13,6 @@ A responsive weather application built using HTML, CSS, and JavaScript.
 - OpenWeather API
 
 ## Live Demo
-(link)
+(https://weather4u-gamma.vercel.app/)
 
-## Screenshots
-(images)
+
