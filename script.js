@@ -1,5 +1,7 @@
 const apiKey = "293447fa7991803d073ea481306b04c7";
 
+const searchBtn = document.getElementById("search-btn");
+
 window.onload = () => {
 
   if(navigator.geolocation){
@@ -17,13 +19,39 @@ window.onload = () => {
 
       error => {
 
-        alert("Location access denied");
+        console.log(error);
 
       }
 
     );
 
   }
+
+}
+
+searchBtn.addEventListener("click", () => {
+
+  const city =
+  document.getElementById("city-input").value;
+
+  if(city !== ""){
+
+    getWeatherByCity(city);
+
+  }
+
+});
+
+async function getWeatherByCity(city){
+
+  const url =
+  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+  const response = await fetch(url);
+
+  const data = await response.json();
+
+  updateUI(data);
 
 }
 
@@ -154,13 +182,5 @@ function updateUI(data){
     "‘Kashtapadithe success tappadu.’";
 
   }
-function updateTime()
-{
 
-  const now = new Date();
-   document.getElementById("time").innerText =now.toLocaleString();
-
-}
-
-setInterval(updateTime,1000);
 }
